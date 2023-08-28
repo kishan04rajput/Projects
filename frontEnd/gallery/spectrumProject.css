@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    font-family: 'Handjet', cursive;
+}
+.tab{
+    margin:auto;
+}
+td{
+    height:300px;
+    width:150px;
+    border: 6px solid white;
+}
+#one{
+    background-color: brown;
+}
+#two{
+    background-color: rgb(255, 0, 0);
+}
+#three{
+    background-color: rgb(50, 42, 165);
+}
+#four{
+    background-color: rgb(42, 165, 69);
+}
+#five{
+    background-color: rgb(128, 165, 42);
+}
