@@ -1,0 +1,173 @@
+#define A1 B01110000
+#define A2 B10001000
+#define A3 B10001000
+#define A4 B11111000
+#define A5 B10001000
+#define A6 B10001000
+#define B1 B11110000
+#define B2 B10001000
+#define B3 B10001000
+#define B4 B11110000
+#define B5 B10001000
+#define B6 B11111000
+#define C1 B11111000
+#define C2 B10000000
+#define C3 B10000000
+#define C4 B10000000
+#define C5 B10000000
+#define C6 B11111000
+#define D1 B11110000
+#define D2 B10001000
+#define D3 B10001000
+#define D4 B10001000
+#define D5 B10001000
+#define D6 B11110000
+#define E {B11111000,B10000000,B10000000,B11110000,B10000000,B11111000}
+#define E
+#define E
+#define E
+#define E
+#define E
+#define F {B11111000,B10000000,B10000000,B11110000,B10000000,B10000000}
+#define F
+#define F
+#define F
+#define F
+#define F
+#define G {B01110000,B10001000,B10000000,B10011000,B10001000,B01110000}
+#define G
+#define G
+#define G
+#define G
+#define G
+#define H {B10001000,B10001000,B11111000,B10001000,B10001000,B10001000}
+#define H
+#define H
+#define H
+#define H
+#define H
+#define I {B11111000,B00100000,B00100000,B00100000,B00100000,B11111000}
+#define I
+#define I
+#define I
+#define I
+#define I
+#define J {B00111000,B00010000,B00010000,B00010000,B10010000,B01100000}
+#define J
+#define J
+#define J
+#define J
+#define J
+#define M {B10001000,B11011000,B10101000,B10101000,B10001000,B10001000}
+#define M
+#define M
+#define M
+#define M
+#define M
+#define N {B10001000,B11001000,B10101000,B10101000,B10011000,B10001000}
+#define N
+#define N
+#define N
+#define N
+#define N
+#define L {B10000000,B10000000,B10000000,B10000000,B10000000,B11111000}
+#define L
+#define L
+#define L
+#define L
+#define L
+#define O {B01110000,B10001000,B10001000,B10001000,B10001000,B01110000}
+#define O
+#define O
+#define O
+#define O
+#define O
+#define P {B11110000,B10001000,B10001000,B11110000,B10000000,B10000000}
+#define P
+#define P
+#define P
+#define P
+#define P
+#define Q {B01110000,B10001000,B10101000,B10011000,B01111000,B00001000}
+#define Q
+#define Q
+#define Q
+#define Q
+#define Q
+#define R {B11110000,B10001000,B10001000,B11110000,B10001000,B10001000}
+#define R
+#define R
+#define R
+#define R
+#define R
+#define S {B01110000,B10001000,B01100000,B00010000,B10001000,B01110000}
+#define S
+#define S
+#define S
+#define S
+#define S
+#define K {B10001000,B10010000,B11100000,B11100000,B10010000,B10001000}
+#define K
+#define K
+#define K
+#define K
+#define K
+#define T {B11111000,B00100000,B00100000,B00100000,B00100000,B00100000}
+#define T
+#define T
+#define T
+#define T
+#define T
+#define U {B10001000,B10001000,B10001000,B10001000,B10001000,B01110000}
+#define U
+#define U
+#define U
+#define U
+#define U
+#define V {B10001000,B10001000,B10001000,B10001000,B01010000,B00100000}
+#define V
+#define V
+#define V
+#define V
+#define V
+#define W {B10001000,B10001000,B10101000,B10101000,B10101000,B01010000}
+#define W
+#define W
+#define W
+#define W
+#define W
+#define X {B10001000,B01010000,B00100000,B00100000,B01010000,B10001000}
+#define X
+#define X
+#define X
+#define X
+#define X
+#define Y {B10001000,B01010000,B00100000,B00100000,B00100000,B00100000}
+#define Y
+#define Y
+#define Y
+#define Y
+#define Y
+#define Z {B11111000,B00001000,B00110000,B01100000,B10000000,B11111000}
+#define Z
+#define Z
+#define Z
+#define Z
+#define Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

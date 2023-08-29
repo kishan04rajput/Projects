@@ -1,0 +1,250 @@
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+#include <ESP8266mDNS.h>
+// #include <FS.h>
+#include "LittleFS.h"
+#include "./WEBPAGE1.h"
+#include "./WEBPAGE2.h"
+#include "./WEBPAGE3.h"
+
+#ifndef STASSID
+#define STASSID "SSID"
+#define STAPSK "WatchWord"
+#define LOGIN_USERNAME "Admin"
+#define LOGIN_PASSWORD "ADMIN"
+
+#endif
+
+const char *ssid = STASSID;
+const char *password = STAPSK;
+
+File fsUploadFile;
+
+ESP8266WebServer server(80);
+
+const int led = 13;
+
+char msg1[] PROGMEM = R"=====(
+File Uploaded Successfully....
+)=====";
+
+void handleHtml()
+{
+      Dir dir = SPIFFS.openDir("/");
+      String temp = "";
+      char *temp1;
+      while (dir.next())
+      {
+            temp = "<a href=" + dir.fileName() + ">" + dir.fileName() + "</a><br>";
+            int i = 0;
+            for (i = 0; temp[i] != '\0'; i++)
+            {
+                  temp1[i] = temp[i];
+            }
+            temp1[i] = '\0';
+            temp = "";
+            strcat_P(msg, temp1);
+            int i = 0;
+            for (i = 0; temp1[i] != '\0'; i++)
+            {
+                  temp1[i] = '\0';
+            }
+      }
+      strcat_P(msg, "</div></body></html>");
+      server.send_P(200, "text/html", msg);
+}
+
+void handleLogin()
+{
+      server.send_P(200, "text/html", login_page);
+}
+
+void handleBackend()
+{
+      String userName = server.arg("txtUserName");
+      String watchWord = server.arg("pwWatchword");
+      //  char *temp = userName+watchWord;
+      //  char *backend_page PROGMEM= temp;
+      //  server.send_P(200, "text/html", backend_page);
+      if (userName == LOGIN_USERNAME && watchWord == LOGIN_PASSWORD)
+      {
+            server.send_P(200, "text/html", success);
+      }
+      else
+      {
+            server.send_P(200, "text/html", err);
+      }
+}
+
+void handleFileUpload()
+{
+      // upload a new file to the SPIFFS
+      HTTPUpload &upload = server.upload();
+      if (upload.status == UPLOAD_FILE_START)
+      {
+            String filename = upload.filename;
+            if (!filename.startsWith("/"))
+                  filename = "/" + filename;
+            Serial.print(F("handleFileUpload Name: "));
+            Serial.println(filename);
+            fsUploadFile = SPIFFS.open(filename, "w"); // Open the file for writing in SPIFFS (create if it doesn't exist)
+            filename = String();
+      }
+      else if (upload.status == UPLOAD_FILE_WRITE)
+      {
+            if (fsUploadFile)
+                  fsUploadFile.write(upload.buf, upload.currentSize); // Write the received bytes to the file
+      }
+      else if (upload.status == UPLOAD_FILE_END)
+      {
+            if (fsUploadFile)
+            {                           // If the file was successfully created
+                  fsUploadFile.close(); // Close the file again
+                  Serial.print(F("handleFileUpload Size: "));
+                  Serial.println(upload.totalSize);
+                  server.sendHeader("Location", "/success.html"); // Redirect the client to the success page
+                  server.send(303);
+            }
+            else
+            {
+                  server.send(500, "text/plain", F("500: couldn't create file"));
+            }
+      }
+}
+/*
+void handleRoot() {
+  digitalWrite(led, 1);
+  server.send(200, "text/plain", "hello from esp8266!");
+  digitalWrite(led, 0);
+}
+*/
+
+void successHTML()
+{
+      server.send_P(200, "text/html", msg1);
+}
+
+char message[] PROGMEM = R"=====(
+ERROR 404: File Not Found
+)=====";
+void handleNotFound()
+{
+      digitalWrite(led, 1);
+
+      //  message += "URI: ";
+      //  message += server.uri();
+      //  message += "\nMethod: ";
+      //  message += (server.method() == HTTP_GET) ? "GET" : "POST";
+      //  message += "\nArguments: ";
+      //  message += server.args();
+      //  message += "\n";
+      //  for (uint8_t i = 0; i < server.args(); i++) {
+      //    message += " " + server.argName(i) + ": " + server.arg(i) + "\n";
+      //  }
+      server.send_P(404, "text/plain", message);
+      digitalWrite(led, 0);
+}
+
+void setup(void)
+{
+      pinMode(led, OUTPUT);
+      digitalWrite(led, 0);
+      Serial.begin(115200);
+      WiFi.mode(WIFI_STA);
+      WiFi.begin(ssid, password);
+      Serial.println("");
+
+      // Wait for connection
+      while (WiFi.status() != WL_CONNECTED)
+      {
+            delay(500);
+            Serial.print(".");
+      }
+      Serial.println("");
+      Serial.print("Connected to ");
+      Serial.println(ssid);
+      Serial.print("IP address: ");
+      Serial.println(WiFi.localIP());
+
+      if (MDNS.begin("esp8266"))
+      {
+            Serial.println("MDNS responder started");
+      }
+      SPIFFS.begin(); // Start the SPI Flash Files System
+
+      server.on("/login", handleLogin);
+
+      server.on("/backend", handleBackend);
+
+      //SPIFFS.format();
+
+      //  server.on("/helloworld.txt", [](){
+      //    File download = SPIFFS.open("/helloworld.txt", "r");
+      //    if(download){
+      //      server.sendHeader("Content-Type", "text/text");
+      //      server.sendHeader("Content-Disposition", "attachment; filename=helloworld.txt");
+      //      server.sendHeader("Connection", "close");
+      //      server.streamFile(download, "application/octet-stream");
+      //      download.close();
+      //      delay(1000);
+      //      server.sendHeader("Location","/");      // Redirect the client to the success page
+      //      server.send(303);
+      //    }
+      //    else{
+      //      Serial.println("Error: Reading File...");
+      //    }
+      //  });
+      //
+
+      server.on(
+          "/datahandling", HTTP_POST, // if the client posts to the upload page
+          []() { server.send(200); }, // Send status 200 (OK) to tell the client we are ready to receive
+          handleFileUpload            // Receive and save the file
+      );
+      server.on("/success.html", successHTML);
+      server.on("/", handleHtml);
+
+      Dir dir = SPIFFS.openDir("");
+      File download;
+      String filename;
+      while (dir.next())
+      {
+            filename = dir.fileName();
+            server.on(filename, []() {
+                  download = SPIFFS.open(filename, "r");
+                  if (download)
+                  {
+                        server.sendHeader("Content-Type", "text/text");
+                        server.sendHeader("Content-Disposition", "attachment; filename=" + filename[1]);
+                        server.sendHeader("Connection", "close");
+                        server.streamFile(download, "application/octet-stream");
+                        try
+                        {
+                              download.close();
+                        }
+                        catch (err)
+                        {
+                              Serial.println(F("Error: Reading File..."));
+                        }
+                        delay(1000);
+                        server.sendHeader("Location", "/"); // Redirect the client to the success page
+                        server.send(303);
+                  }
+                  else
+                  {
+                        Serial.println(F("Error: Reading File..."));
+                  }
+            });
+      }
+      server.onNotFound(handleNotFound);
+
+      server.begin();
+      Serial.println(F("HTTP server started"));
+}
+void loop(void)
+{
+
+      server.handleClient();
+      MDNS.update();
+}

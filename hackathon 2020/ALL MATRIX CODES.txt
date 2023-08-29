@@ -1,0 +1,243 @@
+    if (inputMessage[counter] == 'A')
+    {
+      your_text[counter][0] = B01110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B11111000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B10001000;
+    }
+    if (inputMessage[counter] == 'B')
+    {
+      your_text[counter][0] = B11110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B11110000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B11111000;
+    }   
+ if (inputMessage[counter] == 'C')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B10000000;
+      your_text[counter][2] = B10000000;
+      your_text[counter][3] = B10000000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B11111000;
+    }   
+ if (inputMessage[counter] == 'D')
+    {
+      your_text[counter][0] = B11110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B10001000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B11110000;
+    }   
+ if (inputMessage[counter] == 'E')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B10000000;
+      your_text[counter][2] = B10000000;
+      your_text[counter][3] = B11110000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B11111000;
+    }   
+ if (inputMessage[counter] == 'F')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B10000000;
+      your_text[counter][2] = B10000000;
+      your_text[counter][3] = B11110000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B10000000;
+    }  
+  if (inputMessage[counter] == 'G')
+    {
+      your_text[counter][0] = B01110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10000000;
+      your_text[counter][3] = B10011000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B01110000;
+    }   
+ if (inputMessage[counter] == 'H')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B11111000;
+      your_text[counter][3] = B10001000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B10001000;
+    }  
+  if (inputMessage[counter] == 'I')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B00100000;
+      your_text[counter][2] = B00100000;
+      your_text[counter][3] = B00100000;
+      your_text[counter][4] = B00100000;
+      your_text[counter++][5] = B11111000;
+    }  
+  if (inputMessage[counter] == 'J')
+    {
+      your_text[counter][0] = B00111000;
+      your_text[counter][1] = B00010000;
+      your_text[counter][2] = B00010000;
+      your_text[counter][3] = B00010000;
+      your_text[counter][4] = B10010000;
+      your_text[counter++][5] = B01100000;
+    }
+if (inputMessage[counter] == 'M')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B11011000;
+      your_text[counter][2] = B10101000;
+      your_text[counter][3] = B10101000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B10001000;
+    }
+if (inputMessage[counter] == 'N')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B11001000;
+      your_text[counter][2] = B10101000;
+      your_text[counter][3] = B10101000;
+      your_text[counter][4] = B10011000;
+      your_text[counter++][5] = B10001000;
+    }
+if (inputMessage[counter] == 'L')
+    {
+      your_text[counter][0] = B10000000;
+      your_text[counter][1] = B10000000;
+      your_text[counter][2] = B10000000;
+      your_text[counter][3] = B10000000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B11111000;
+    }
+if (inputMessage[counter] == 'O')
+    {
+      your_text[counter][0] = B01110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B10001000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B01110000;
+    }
+if (inputMessage[counter] == 'P')
+    {
+      your_text[counter][0] = B11110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B11110000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B10000000;
+    }
+if (inputMessage[counter] == 'Q')
+    {
+      your_text[counter][0] = B01110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10101000;
+      your_text[counter][3] = B10011000;
+      your_text[counter][4] = B01111000;
+      your_text[counter++][5] = B00001000;
+    }
+if (inputMessage[counter] == 'R')
+    {
+      your_text[counter][0] = B11110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B11110000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B10001000;
+    }
+if (inputMessage[counter] == 'S')
+    {
+      your_text[counter][0] = B01110000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B01100000;
+      your_text[counter][3] = B00010000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B01110000;
+    }
+if (inputMessage[counter] == 'K')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B10010000;
+      your_text[counter][2] = B11100000;
+      your_text[counter][3] = B11100000;
+      your_text[counter][4] = B10010000;
+      your_text[counter++][5] = B10001000;
+    }
+if (inputMessage[counter] == 'T')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B00100000;
+      your_text[counter][2] = B00100000;
+      your_text[counter][3] = B00100000;
+      your_text[counter][4] = B00100000;
+      your_text[counter++][5] = B00100000;
+    }
+if (inputMessage[counter] == 'U')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B10001000;
+      your_text[counter][4] = B10001000;
+      your_text[counter++][5] = B01110000;
+    }
+if (inputMessage[counter] == 'V')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10001000;
+      your_text[counter][3] = B10001000;
+      your_text[counter][4] = B01010000;
+      your_text[counter++][5] = B00100000;
+    }
+if (inputMessage[counter] == 'W')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B10001000;
+      your_text[counter][2] = B10101000;
+      your_text[counter][3] = B10101000;
+      your_text[counter][4] = B10101000;
+      your_text[counter++][5] = B01010000;
+    }
+if (inputMessage[counter] == 'X')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B01010000;
+      your_text[counter][2] = B00100000;
+      your_text[counter][3] = B00100000;
+      your_text[counter][4] = B01010000;
+      your_text[counter++][5] = B10001000;
+    }
+if (inputMessage[counter] == 'Y')
+    {
+      your_text[counter][0] = B10001000;
+      your_text[counter][1] = B01010000;
+      your_text[counter][2] = B00100000;
+      your_text[counter][3] = B00100000;
+      your_text[counter][4] = B00100000;
+      your_text[counter++][5] = B00100000;
+    }
+ if (inputMessage[counter] == 'Z')
+    {
+      your_text[counter][0] = B11111000;
+      your_text[counter][1] = B00001000;
+      your_text[counter][2] = B00110000;
+      your_text[counter][3] = B01100000;
+      your_text[counter][4] = B10000000;
+      your_text[counter++][5] = B11111000;
+    }
+if (inputMessage[counter] == '')
+    {
+      your_text[counter][0] = B00000000;
+      your_text[counter][1] = B00000000;
+      your_text[counter][2] = B00000000;
+      your_text[counter][3] = B00000000;
+      your_text[counter][4] = B00000000;
+      your_text[counter++][5] = B00000000;
+    }

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Node MCU</title>
+<meta http-equiv="refresh" content="5;
+URL='https://docs.google.com/spreadsheets/d/18RA24PyOaFqm2JUBhv-ZPhsdjuggDoF8uyRB0l6SvwY/edit?usp=sharing'"/>
+</head>
+<body>
+CLICK HERE TO
+<a href="https://docs.google.com/spreadsheets/d/18RA24PyOaFqm2JUBhv-ZPhsdjuggDoF8uyRB0l6SvwY/edit?usp=sharing/">YOUR RESULT</a>
+</body>
+</html>

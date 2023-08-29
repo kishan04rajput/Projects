@@ -1,0 +1,2 @@
+Program storage space: 1MB
+Dynamic memory: 80KB
