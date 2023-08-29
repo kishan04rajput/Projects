@@ -1,0 +1,196 @@
+#include<LiquidCrystal.h>
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);//RS, EN, D4, D5, D6, D7
+byte c[8] = {
+  B00000,
+  B00000,
+  B00100,
+  B00000,
+  B01110,
+  B01110,
+  B01110,
+  B01110,
+};
+byte c0[8] = {
+  B00000,
+  B00000,
+  B01000,
+  B00000,
+  B01110,
+  B01110,
+  B01110,
+  B01110,
+};
+byte c1[8] = {
+  B00000,
+  B00000,
+  B00010,
+  B00000,
+  B01110,
+  B01110,
+  B01110,
+  B01110,
+};
+void setup(){
+  lcd.begin(16,2);
+  lcd.createChar(0, c);
+  lcd.createChar(1, c0);
+  lcd.createChar(2, c1);
+  }
+
+void loop(){
+  lcd.clear();
+  cake();
+  ca1();
+  lcd.setCursor(5,0);
+  lcd.print("H");
+  ca1();
+  d();
+  lcd.setCursor(6,0);
+  lcd.print("A");
+  ca1();
+  d();
+  lcd.setCursor(7,0);
+  lcd.print("P");
+  ca1();
+  d();
+  lcd.setCursor(8,0);
+  lcd.print("P");
+  ca1();
+  d();
+  lcd.setCursor(9,0);
+  lcd.print("Y");
+  ca1();
+  d();
+  lcd.setCursor(4,1);
+  lcd.print("B");
+  ca1();
+  d();
+  lcd.setCursor(5,1);
+  lcd.print("I");
+  ca1();
+  d();
+  lcd.setCursor(6,1);
+  lcd.print("R");
+  ca1();
+  d();
+  lcd.setCursor(7,1);
+  lcd.print("T");
+  ca1();
+  d();
+  lcd.setCursor(8,1);
+  lcd.print("H");
+  ca1();
+  d();
+  lcd.setCursor(9,1);
+  lcd.print("D");
+  ca1();
+  d();
+  lcd.setCursor(10,1);
+  lcd.print("A");
+  ca1();
+  d();
+  lcd.setCursor(11,1);
+  lcd.print("Y");
+  ca1();
+  d();
+  lcd.clear();
+  cake();
+  ca1();
+  lcd.setCursor(5,0);
+  lcd.print("S");
+  ca1();
+  d();
+  lcd.setCursor(6,0);
+  lcd.print("H");
+  ca1();
+  d();
+  lcd.setCursor(7,0);
+  lcd.print("I");
+  ca1();
+  d();
+  lcd.setCursor(8,0);
+  lcd.print("K");
+  ca1();
+  d();
+  lcd.setCursor(9,0);
+  lcd.print("H");
+  ca1();
+  d();
+  lcd.setCursor(10,0);
+  lcd.print("A");
+  ca1();
+  d();
+  lcd.setCursor(5,1);
+  lcd.print("T");
+  ca1();
+  d();
+  lcd.setCursor(6,1);
+  lcd.print("I");
+  ca1();
+  d();
+  lcd.setCursor(7,1);
+  lcd.print("W");
+  ca1();
+  d();
+  lcd.setCursor(8,1);
+  lcd.print("A");
+  ca1();
+  d();
+  lcd.setCursor(9,1);
+  lcd.print("R");
+  ca1();
+  d();
+  lcd.setCursor(10,1);
+  lcd.print("I");
+  ca1();
+  d();
+}
+
+void d(){
+  delay(300);
+}
+void cake(){
+  lcd.clear();
+  delay(200);
+  lcd.setCursor(0,1);
+  lcd.print(char(255));
+  lcd.print(char(255));
+  lcd.print(char(255));
+  lcd.setCursor(13,1);
+  lcd.print(char(255));
+  lcd.print(char(255));
+  lcd.print(char(255));
+  delay(500);
+  lcd.setCursor(1,0);
+  lcd.write(byte(0));
+  lcd.setCursor(14,0);
+  lcd.write(byte(0));
+  delay(500);
+}
+void ca1(){
+ lcd.setCursor(1,0);
+  lcd.write(byte(1));
+  de();
+  lcd.setCursor(14,0);
+  lcd.write(byte(1));
+  de();
+  lcd.setCursor(1,0);
+  lcd.write(byte(0));
+  lcd.setCursor(14,0);
+  lcd.write(byte(0));
+  de();
+  lcd.setCursor(1,0);
+  lcd.write(byte(2));
+  de();
+  lcd.setCursor(14,0);
+  lcd.write(byte(2));
+  de(); 
+  lcd.setCursor(1,0);
+  lcd.write(byte(0));
+  lcd.setCursor(14,0);
+  lcd.write(byte(0));
+}
+void de(){
+  delay(100);
+}
+  
