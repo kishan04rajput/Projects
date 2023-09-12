@@ -1,0 +1,4 @@
+-> put all the songs in the folder "songs"
+-> put all the cover photos in folder "covers"
+-> change name of songs in "script.js > songs"
+-> Voila & Its Works...
