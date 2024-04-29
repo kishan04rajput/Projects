@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    /* border: 1px solid red; */
+    background-color: black;
+}
+
+.titlebar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,273 @@
+* {
+  /* border: 1px solid red; */
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+#bodywrapper {
+  margin: 10vh 10vw;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftside {
+  /* width: 20%; */
+}
+
+.titlebar #rightside {
+  width: 67%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.firstslide {
+}
+
+.secondslide #threeboxes {
+  display: flex;
+  /* border: 1px solid red; */
+  /* justify-content: space-between; */
+}
+
+#threeboxes #readMoreBox {
+  width: fit-content;
+  background-color: white;
+  position: relative;
+  top: 9%;
+  left: 4%;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+#firstbox {
+  /* border: 1px solid red; */
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  margin-right: 4%;
+  border-radius: 11px;
+}
+
+#secondbox {
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  margin-right: 4%;
+  border-radius: 11px;
+}
+
+#thirdbox {
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  border-radius: 11px;
+}
+
+#threeboxes #topPart {
+  height: 70%;
+  text-align: left;
+  /* position: relative; */
+}
+
+#threeboxes #bottomPart {
+  /* border: 1px solid red; */
+  height: 30%;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.thirdslide {
+  display: flex;
+  height: 100vh;
+  margin: auto;
+}
+
+.thirdslide #leftside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdslide #rightside {
+  width: 100%;
+  height: 100%;
+}
+
+.thirdslide #rightside #threeBoxes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.thirdslide #rightside #threeBoxes #firstBox {
+  width: 70%;
+  height: 30%;
+  border: 1px solid white;
+  border-radius: 11px;
+  display: flex;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #firstBox #leftside {
+  width: 30%;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #firstBox #rightSide {
+  width: 70%;
+  padding: 1%;
+}
+
+@media (max-width: 400px) {
+  .thirdslide #rightside #threeBoxes #firstBox {
+    flex-direction: column;
+  }
+
+  .thirdslide #rightside #threeBoxes #firstBox #leftside {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .thirdslide #rightside #threeBoxes #firstBox #rightSide {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.thirdslide #rightside #threeBoxes #secondBox {
+  width: 70%;
+  height: 30%;
+  border: 1px solid white;
+  border-radius: 11px;
+  display: flex;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #secondBox #leftside {
+  width: 30%;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #secondBox #rightSide {
+  width: 70%;
+  padding: 1%;
+}
+
+@media (max-width: 400px) {
+  .thirdslide #rightside #threeBoxes #secondBox {
+    flex-direction: column;
+  }
+
+  .thirdslide #rightside #threeBoxes #secondBox #leftside {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .thirdslide #rightside #threeBoxes #secondBox #rightSide {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.thirdslide #rightside #threeBoxes #thirdBox {
+  width: 70%;
+  height: 30%;
+  border: 1px solid white;
+  border-radius: 11px;
+  display: flex;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #thirdBox #leftside {
+  width: 30%;
+  padding: 1%;
+}
+
+.thirdslide #rightside #threeBoxes #thirdBox #rightSide {
+  width: 70%;
+  padding: 1%;
+}
+
+@media (max-width: 400px) {
+  .thirdslide #rightside #threeBoxes #thirdBox {
+    flex-direction: column;
+  }
+
+  .thirdslide #rightside #threeBoxes #thirdBox #leftside {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .thirdslide #rightside #threeBoxes #thirdBox #rightSide {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.fourthslide {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fourthslide #topBox {
+  height: 50%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fourthslide #topBox #leftSide {
+  width: 50%;
+}
+
+.fourthslide #topBox #rightSide {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fourthslide #topBox #rightSide #box1 {
+  width: 40%;
+  height: 40%;
+  background-color: azure;
+  border-radius: 11px;
+}
+
+.fourthslide #topBox #rightSide #box2 {
+  width: 40%;
+  height: 40%;
+  background-color: azure;
+  border-radius: 11px;
+}
+
+.fourthslide #bottomBox {
+  background-color: grey;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10vh;
+}

@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  border-radius: 11px;
+  /* border: 1px solid red; */
+}
+
+input {
+  padding: 1vh;
+  width: 100%;
+  font-weight: bolder;
+}
+
+body{
+  background-color: black;
+}
+
+.titlebar{
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper{
+  width: 70%;
+  margin: 2vh 15vw;
+  min-width: fit-content;
+}
+
+table{
+  
+}
+
+td{
+  
+}

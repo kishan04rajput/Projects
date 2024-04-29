@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  border-radius: 11px;
+  background-color: black;
+  text-decoration: none;
+  /* border: 1px solid red; */
+}
+
+.titlebar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.titlebar #rightSide {
+  /* border: 1px solid red; */
+  /* overflow: auto; */
+}
+
+.titlebar #rightSide table {
+  margin-top: 2%;
+}
+
+.titlebar #rightSide table td {
+  /* border: 1px solid red; */
+  padding: 1vw;
+}
+
+.wrapper {
+  margin: 2vh 10vw;
+}
+
+.slideOne {
+  /* border: 1px solid red; */
+  padding: 1%;
+}
+
+.slideTwo {
+  /* border: 1px solid red; */
+  height: 99vh;
+  padding: 1%;
+}
+
+.slideTwo #threeboxes {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#threeboxes #readMoreBox {
+  width: fit-content;
+  background-color: white;
+  position: relative;
+  top: 9%;
+  left: 4%;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+#firstbox {
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  margin-right: 4%;
+  border-radius: 11px;
+}
+
+#secondbox {
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  margin-right: 4%;
+  border-radius: 11px;
+}
+
+#thirdbox {
+  width: 30%;
+  min-width: 320px;
+  height: 70vh;
+  /* border: 1px solid white; */
+  border-radius: 11px;
+}
+
+#threeboxes #topPart {
+  height: 70%;
+  text-align: left;
+}
+
+#threeboxes #bottomPart {
+  /* border: 1px solid red; */
+  height: 30%;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.slideThree {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 99vh;
+  margin: auto;
+  padding: 1%;
+}
+
+.slideThree #leftside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideThree #rightside {
+  width: 100%;
+  height: 100%;
+}
+
+.slideThree #rightside #threeBoxes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slideThree #rightside #threeBoxes #firstBox {
+  width: 70%;
+  height: 30%;
+  border: 1px solid white;
+  border-radius: 11px;
+  display: flex;
+  padding: 1%;
+}
+
+.slideThree #rightside #threeBoxes #firstBox #leftside {
+  width: 30%;
+  padding: 1%;
+}
+
+.slideThree #rightside #threeBoxes #firstBox #rightSide {
+  width: 70%;
+  padding: 1%;
+}
+
+@media (max-width: 500px) {
+  .slideThree #rightside #threeBoxes #firstBox {
+    flex-direction: column;
+  }
+
+  .slideThree #rightside #threeBoxes #firstBox #leftside {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .slideThree #rightside #threeBoxes #firstBox #rightSide {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.slideThree #rightside #threeBoxes #secondBox {
+  width: 70%;
+  height: 30%;
+  border: 1px solid white;
+  border-radius: 11px;
+  display: flex;
+  padding: 1%;
+}
+
+.slideThree #rightside #threeBoxes #secondBox #leftside {
+  width: 30%;
+  padding: 1%;
+}
+
+.slideThree #rightside #threeBoxes #secondBox #rightSide {
+  width: 70%;
+  padding: 1%;
+}
+
+@media (max-width: 500px) {
+  .slideThree #rightside #threeBoxes #secondBox {
+    flex-direction: column;
+  }
+
+  .slideThree #rightside #threeBoxes #secondBox #leftside {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .slideThree #rightside #threeBoxes #secondBox #rightSide {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.slideFour {
+  /* border: 1px solid red; */
+  height: 40vh;
+  padding: 1%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+footer {
+  /* border: 1px solid red; */
+  height: 11vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

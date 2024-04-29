@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css" />
+    <link rel="icon" href="linkedingageLogo.jpg" type="image/x-icon" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <header>
+      <div class="titlebar">
+        <div
+          id="leftside"
+          style="display: flex; align-items: center; padding: 1%"
+        >
+          <a href="http://www.linkedingage.com" style="height: 100%">
+            <img
+              src="linkedingageLogo.jpg"
+              alt="Logo"
+              style="height: 100%; border-radius: 100%"
+              title="Linkedingage"
+            />
+          </a>
+          <span style="font-size: 2em">Linkedingage</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="intro">
+        <span
+          ><h1 style="margin-bottom: 2vh">
+            Start Your Journey with Linkedingage
+          </h1></span
+        >
+        <span
+          ><p>
+            Reduce your efforts to engage and gain traction on Linkedin
+          </p></span
+        >
+      </div>
+      <div class="signUpForm">
+        <form
+          onsubmit="return validateForm()"
+          action="index.html"
+          name="myForm"
+          method="get"
+          target="_blank"
+        >
+          <h1 style="text-align: center; margin-bottom: 4vh">
+            Signup with email
+          </h1>
+          <table style="border-collapse: collapse">
+            <tr style="border-bottom: 1vh solid black">
+              <td>Name:</td>
+              <td>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter your name"
+                  style="color: black; width: 20vw"
+                />
+              </td>
+              <td></td>
+            </tr>
+            <tr style="border-bottom: 1vh solid black">
+              <td>User Id:</td>
+              <td>
+                <input
+                  type="text"
+                  name="userId"
+                  id="userid"
+                  placeholder="Enter Unique User ID"
+                  style="color: black; width: 20vw"
+                />
+              </td>
+              <td></td>
+            </tr>
+            <tr style="border-bottom: 1vh solid black">
+              <td>Enter Email ID:</td>
+              <td>
+                <input
+                  type="text"
+                  name="emailid"
+                  id="emailid"
+                  placeholder="Enter Emailid"
+                  style="color: black; width: 20vw"
+                />
+              </td>
+              <td></td>
+            </tr>
+            <tr title="8 Character Long" style="border-bottom: 1vh solid black">
+              <td>Enter Password:</td>
+              <td>
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Enter Password"
+                  style="color: black; width: 20vw"
+                />
+              </td>
+              <td
+                id="passError"
+                class="formError"
+                style="color: red; font-weight: bolder"
+              ></td>
+            </tr>
+            <tr title="8 Character Long" style="border-bottom: 2vh solid black">
+              <td>Retype Password:</td>
+              <td>
+                <input
+                  type="password"
+                  name="rpass"
+                  id="rpass"
+                  placeholder="Retype Password"
+                  style="color: black; width: 20vw"
+                />
+              </td>
+              <td
+                id="rpassError"
+                class="formError"
+                style="color: red; font-weight: bolder"
+              ></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <input
+                  type="submit"
+                  value="Signup"
+                  style="
+                    color: black;
+                    font-weight: bold;
+                    padding: 1%;
+                    border-radius: 100px;
+                  "
+                />
+                <!-- <input type="submit" value="Login" style="color: black; font-weight: bold; margin-left: 4vw; padding: 1%; border-radius: 100px;"> -->
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="signUp.js"></script>
+</html>

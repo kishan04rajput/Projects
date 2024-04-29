@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  border-radius: 11px;
+  background-color: black;
+  text-decoration: none;
+  /* border: 1px solid red; */
+}
+
+.titlebar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.titlebar #rightSide {
+  /* border: 1px solid red; */
+  /* overflow: auto; */
+}
+
+.titlebar #rightSide table {
+  margin-top: 2%;
+}
+
+.titlebar #rightSide table td {
+  /* border: 1px solid red; */
+  padding: 1vw;
+}
+
+.wrapper {
+  /* border: 1px solid red; */
+  margin: 2vh 11vw;
+}
+
+.slideOne {
+  /* border: 1px solid red; */
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: 2vh 2vw;
+}
+
+.slideTwo {
+  /* border: 1px solid red; */
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: 2vh 2vw;
+  margin: 9vh 0;
+}
+
+.slideTwo table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.slideTwo table td {
+  border: 1px solid whitesmoke;
+  height: 100%;
+}
+
+.slideTwo table td .boxOne {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  padding: 2%;
+  overflow: auto;
+}
+
+.slideTwo table td .boxOne #leftSide {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.slideTwo table td .boxOne #rightSide {
+  /* border: 1px solid red; */
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slideTwo table td .boxOne #rightSide .twoButtons {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 7%;
+  width: 100%;
+}
+
+.slideTwo table td .boxOne #rightSide .twoButtons a {
+  min-width: fit-content;
+}
+
+.slideTwo table td .boxOne #rightSide .twoButtons .firstButton {
+  /* border: 1px solid red; */
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxOne #rightSide .twoButtons .secondButton {
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxTwo {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  padding: 2%;
+  /* overflow: auto; */
+}
+
+.slideTwo table td .boxTwo #leftSide {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.slideTwo table td .boxTwo #rightSide {
+  /* border: 1px solid red; */
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.slideTwo table td .boxTwo #rightSide .twoButtons {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 7%;
+  width: 100%;
+}
+
+.slideTwo table td .boxTwo #rightSide .twoButtons a {
+  min-width: fit-content;
+}
+
+.slideTwo table td .boxTwo #rightSide .twoButtons .firstButton {
+  /* border: 1px solid red; */
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxTwo #rightSide .twoButtons .secondButton {
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxThree {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  padding: 2%;
+  /* overflow: auto; */
+}
+
+.slideTwo table td .boxThree #leftSide {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.slideTwo table td .boxThree #rightSide {
+  /* border: 1px solid red; */
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.slideTwo table td .boxThree #rightSide .twoButtons {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 7%;
+  width: 100%;
+}
+
+.slideTwo table td .boxThree #rightSide .twoButtons a {
+  min-width: fit-content;
+}
+
+.slideTwo table td .boxThree #rightSide .twoButtons .firstButton {
+  /* border: 1px solid red; */
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxThree #rightSide .twoButtons .secondButton {
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxFour {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  padding: 2%;
+  /* overflow: auto; */
+}
+
+.slideTwo table td .boxFour #leftSide {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.slideTwo table td .boxFour #rightSide {
+  /* border: 1px solid red; */
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.slideTwo table td .boxFour #rightSide .twoButtons {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 7%;
+  width: 100%;
+}
+
+.slideTwo table td .boxFour #rightSide .twoButtons a {
+  min-width: fit-content;
+}
+
+.slideTwo table td .boxFour #rightSide .twoButtons .firstButton {
+  /* border: 1px solid red; */
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideTwo table td .boxFour #rightSide .twoButtons .secondButton {
+  text-align: left;
+  background-color: gray;
+  padding: 2% 20%;
+  min-width: fit-content;
+  font-size: 0.7rem;
+}
+
+.slideThree{
+  /* border: 1px solid red; */
+  height: 40vh;
+  width: 100%;
+  padding: 2%;
+  display: flex;
+}
+
+.slideThree #leftSide{
+  /* border: 1px solid red; */
+  padding: 2%;
+  width: 50%;
+}
+
+.slideThree #rightSide{
+  /* border: 1px solid red; */
+  /* padding: 2%; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
